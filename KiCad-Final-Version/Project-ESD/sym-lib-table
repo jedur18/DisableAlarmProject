@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name Project-ESD-rescue)(type Legacy)(uri ${KIPRJMOD}/Project-ESD-rescue.lib)(options "")(descr ""))
+)
