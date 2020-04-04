@@ -43,6 +43,8 @@ Once the hash button is pushed, the system enters in alarm mode, so blue led is 
 
 -Project_disAlarm_serial: This code works in the same way as Project_disAlarm with one difference. The activation of the alarm mode is caused by a '1' received in the serial port from the other device which has the pir sensor. Once the alarm is disabled we sent another '1' using the serial port in order that the other device swich off its alarm and change its state.
 
+-Project_lpdisAlarm: This code works in the same way as Project_disAlarm but implements low power modes. In particular, it is implemented the low-power run mode. The low-power run mode will permform in the alarm_state = false (alarm disabled) where just two operations are running: ligthing the blue led and checking the hash button.
+
 
 
 
