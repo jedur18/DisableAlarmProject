@@ -21,7 +21,9 @@ The available options for running are:
 
 Description of the different files:
 -Project_pwm: Asigns a PWM output signal to the PA5 pin (blue led) using the timer 2.
+
 -Project_adc: Allows to read the PA4 pin doing Analog to digital convertion. Since we do not use any analog sensor in our project the value obtained is the offset of the pins when they are in the air (wihtout anything connected)
+
 -Project_buttons: Allows the management of 4x3 matrix keyboard. Rows are set as output while columns are input. Powering a row, the three columns can be check in order to determine if one of the buttons is pushed. To determine if a button is pushed it lights different combination of the leds. Buttons on the first col lights the two leds during a second, the buttons on the second col lights the blue led during a second and the buttons on the third col lights the red led.
 Note: For this file  it has not been used the hal functions. All the configuration for the pins is done by accesing directly to the concrete registers of the core.
 Pins are:
@@ -34,6 +36,7 @@ Pins are:
     -PB5: Col3
     -PB6: Col2
     -PB7: Col1
+    
 -Project_serial: Implements the serial communication. tx(transmiter) is assigned to PA2 pin and rx(receiver) is assigned to PA3 pin. As we just have one device the idea is to wire PA3 and PA2 pins of de device in order to check this code. It works as follows: A message is written in tx port. Then rx port is read and the value received is printed. If no value is read it prints a warning.
 
 -Project_disAlarm: This file include the logic for our alarm system disable. For this version its used
