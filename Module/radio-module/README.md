@@ -10,13 +10,22 @@ For running the programs:
 
 The available options for running are:
 - Four files which have the minimun requirements:
+
 ----- Project_pwm.rs
+
 ----- Project_adc.rs
+
 ----- Project_buttons.rs
+
 ----- Project_serial.rs
+
 - File with the logic implemented for the project:
+
 ----- Project_disAlarm.rs
+
 ----- Project_disAlarm_serial.rs
+
+----- Project_lpdisAlarm.rs
 
 
 Description of the different files:
@@ -27,15 +36,25 @@ Description of the different files:
 -Project_buttons: Allows the management of 4x3 matrix keyboard. Rows are set as output while columns are input. Powering a row, the three columns can be check in order to determine if one of the buttons is pushed. To determine if a button is pushed it lights different combination of the leds. Buttons on the first col lights the two leds during a second, the buttons on the second col lights the blue led during a second and the buttons on the third col lights the red led.
 Note: For this file  it has not been used the hal functions. All the configuration for the pins is done by accesing directly to the concrete registers of the core.
 Pins are:
+
     -PA0: Red led
+    
     -PA5: Blue led
+    
     -PA9: Row1
+    
     -PA10: Row2
+    
     -PA11: Row3
+    
     -PA12: Row4
+    
     -PB5: Col3
+    
     -PB6: Col2
+    
     -PB7: Col1
+    
     
 -Project_serial: Implements the serial communication. tx(transmiter) is assigned to PA2 pin and rx(receiver) is assigned to PA3 pin. As we just have one device the idea is to wire PA3 and PA2 pins of de device in order to check this code. It works as follows: A message is written in tx port. Then rx port is read and the value received is printed. If no value is read it prints a warning.
 
